@@ -42,15 +42,15 @@ app.post('/api/notes', (req, res) => {
   res.sendFile(path.join(__dirname, './db/db.json'));
 });
 
-// todo Delete request
-app.delete('/api/notes/:id', (req, res) => {
-  fs.readFile('./db/db.json', 'utf-8', (err, data) => {
-    const deleteInfo = JSON.parse(data);
-    let deleteId = req.params.id.toString();
+// // todo Delete request
+// app.delete('/api/notes/:id', (req, res) => {
+//   fs.readFile('./db/db.json', 'utf-8', (err, data) => {
+//     const deleteInfo = JSON.parse(data);
+//     let deleteId = req.params.id.toString();
 
-    // filter thorugh array to find delete id, and push back new array (fs.writefile
-  });
-});
+//     // filter thorugh array to find delete id, and push back new array (fs.writefile
+//   });
+// });
 
 app.get('*', (req, res) => {
   res.redirect('index.html');
